@@ -64,7 +64,7 @@ public class StopWatchMain {
         			Second = SEC;
         		}
         	}
-        	System.out.println("elapsed time : " + Minute + ":" + Second + "." + Milli);
+        	System.out.println("elapsed time : " + Minute + ":" + Second + "." + Milli);// TODO Need to have milliseconds print .00-09
         	}
      s.stop();
      }
