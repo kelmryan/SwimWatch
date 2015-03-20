@@ -49,23 +49,22 @@ public class StopWatchMain {
     	int Second = 0;
     	int Minute = 0;
         StopWatchMain s = new StopWatchMain();
+        DecimalFormat fmt = new DecimalFormat("00");
         s.start();
         while(Second != 60)
         	{
         	Milli = s.getElapsedTime()/10;
-        	
         	if ( Milli >= 99)
-        	{       			       		
-        		Second = Second + 1;
-        		s.start();
-        		if (Second >= 59)
-        		{
-        			Minute = Minute + 1;
-        			Second = SEC;
-        		}
-        	}
-        	System.out.println("elapsed time : " + Minute + ":" + Second + "." + Milli);// TODO Need to have milliseconds print .00-09
-        	}
-     s.stop();
-     }
+            	{       			       		
+        	    	Second = Second + 1;
+        	    	s.start();
+        	    	if (Second >= 59)
+        	        	{
+        	        		Minute = Minute + 1;
+        	        		Second = SEC;
+        	        	}
+            	}
+        	System.out.println("elapsed time : " + fmt.format(Minute) + ":" + fmt.format(Second) + "." + fmt.format(Milli));
+        s.stop();
+              }
 }
